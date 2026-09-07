@@ -28,7 +28,7 @@
    Serviço: ID (PK), continuidade, nome, preço, cliente;
    Contrato: ID (PK), data, cliente, validade, serviço;
    Falecido: CPF (PK), certidão de óbito, nome, data de nascimento, cliente;
-   Jazigo: ID (PK), número, tipo, status (Multivalorado);
+   Jazigo: ID (PK), número, tipo, status;
 
 6. Diagrama Entidade e Relacionamento (DER)
 
