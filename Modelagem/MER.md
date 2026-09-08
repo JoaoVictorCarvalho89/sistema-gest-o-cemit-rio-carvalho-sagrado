@@ -2,7 +2,8 @@
    
    Cliente, Produto, Serviço, Contrato, Falecido e Jazigo. 
 
-   O CLIENTE pode comprar PRODUTOS do cemitério, tais como decorações, ou assinar contratos, assim, agendando SERVIÇOS funerários para a cerimônia do FALECIDO, este que pode, ou não, estar alocado em um jazigo.
+   O CLIENTE pode comprar PRODUTOS do cemitério, tais como decorações, ou assinar CONTRATOS, assim, agendando SERVIÇOS funerários para a cerimônia do FALECIDO, este que pode, ou não, estar alocado em um jazigo.
+   Enquanto aos FUNCIONÁRIOS, eles possuem status de ocupação e atuação para serem gerenciados conforme a necessidade dos SERVIÇOS contratados pelos CLIENTES.
 
 3. Relacionamentos e Cardinalidades
 
@@ -17,6 +18,9 @@
    
    [Contrato] (0,N) <Validar> (1,N) [Serviço]
    Descrição: Cada contrato pode validar vários serviços, e um serviço pode atender a vários clientes e contratos.
+
+   [Serviço] (0,N) <Validar> (1,N) [Funcionário]
+   Descrição: Alguns serviços devem ser executados por mais de um funcionário, e alguns funcionários podem executar mais de um serviço, ou estarem completamente desocupdos.
    
    [Falecido] (0,N) <Alocar> (1,1) [Jazigo]
    Descrição: Cada falecido pode estar alocado em um jazigo, enquanto um jazigo pode acomodar vários falecidos.
@@ -26,10 +30,12 @@
    Cliente: CPF (PK), nome, e-mail (Multivalorado), telefone (Multivalorado), senha, data de nascimento, endereço (composto);
    Produto: ID (PK), nome, preço, categoria;
    Serviço: ID (PK), continuidade, nome, preço, cliente;
+   Funcionário CPF (PK), nome, telefone (Multivalorado), ocupação, status;
    Contrato: ID (PK), data, cliente, validade, serviço;
    Falecido: CPF (PK), certidão de óbito, nome, data de nascimento, cliente;
    Jazigo: ID (PK), número, tipo, status;
 
-6. Diagrama Entidade e Relacionamento (DER)
+7. Diagrama Entidade e Relacionamento (DER)
 
-<img width="758" height="467" alt="image" src="https://github.com/user-attachments/assets/1e0b27ad-0189-45e7-a60d-c5c2538562cb" />
+<img width="902" height="730" alt="image" src="https://github.com/user-attachments/assets/0eecf652-2b8a-40c8-88e8-90461d117b07" />
+
