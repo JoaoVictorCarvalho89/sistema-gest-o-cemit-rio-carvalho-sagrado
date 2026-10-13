@@ -1,9 +1,15 @@
 1. Entidades
    
-   Cliente, Produto, Serviço, Falecido e Jazigo. 
+* Cliente
+* Produto
+* Serviço
+* Falecido
+* Jazigo
+* Funcionário
+* Unidade_Regional
 
-   O CLIENTE pode comprar PRODUTOS do cemitério, tais como decorações, ou contratar SERVIÇOS funerários para a cerimônia do FALECIDO, este que pode, ou não, estar alocado em um jazigo.
-   Enquanto aos FUNCIONÁRIOS, eles possuem status de ocupação e atuação para serem gerenciados conforme a necessidade dos SERVIÇOS contratados pelos CLIENTES.
+Descrição do Negócio
+O CLIENTE pode comprar PRODUTOS do cemitério (como arranjos e decorações) ou contratar SERVIÇOS funerários para a preparação e cerimônia do FALECIDO, o qual pode ou não estar alocado em um JAZIGO. Cada JAZIGO está vinculado a uma UNIDADE REGIONAL, permitindo a gestão descentralizada do espaço físico. Os FUNCIONÁRIOS pertencem, ou não, à uma UNIDADE REGIONAL e possuem status de ocupação e função para serem alocados conforme a necessidade na execução dos SERVIÇOS contratados pelos CLIENTES.
 
 2. Relacionamentos e Cardinalidades
 
