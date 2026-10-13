@@ -1,15 +1,15 @@
 1. Entidades
    
-* Cliente
-* Produto
-* Serviço
-* Falecido
-* Jazigo
-* Funcionário
-* Unidade_Regional
-
-Descrição do Negócio
-O CLIENTE pode comprar PRODUTOS do cemitério (como arranjos e decorações) ou contratar SERVIÇOS funerários para a preparação e cerimônia do FALECIDO, o qual pode ou não estar alocado em um JAZIGO. Cada JAZIGO está vinculado a uma UNIDADE REGIONAL, permitindo a gestão descentralizada do espaço físico. Os FUNCIONÁRIOS pertencem, ou não, à uma UNIDADE REGIONAL e possuem status de ocupação e função para serem alocados conforme a necessidade na execução dos SERVIÇOS contratados pelos CLIENTES.
+   * Cliente
+   * Produto
+   * Serviço
+   * Falecido
+   * Jazigo
+   * Funcionário
+   * Unidade_Regional
+   
+   Descrição do Negócio
+   O CLIENTE pode comprar PRODUTOS do cemitério (como arranjos e decorações) ou contratar SERVIÇOS funerários para a preparação e cerimônia do FALECIDO, o qual pode ou não estar alocado em um JAZIGO. Cada JAZIGO está vinculado a uma UNIDADE REGIONAL, permitindo a gestão descentralizada do espaço físico. Os FUNCIONÁRIOS pertencem, ou não, à uma UNIDADE REGIONAL e possuem status de ocupação e função para serem alocados conforme a necessidade na execução dos SERVIÇOS contratados pelos CLIENTES.
 
 2. Relacionamentos e Cardinalidades
 
@@ -23,12 +23,12 @@ O CLIENTE pode comprar PRODUTOS do cemitério (como arranjos e decorações) ou 
    
 3. Sugestão de Atributos
 
-   * Cliente: CPF (PK), nome, e-mail (Multivalorado), telefone (Multivalorado), senha, data de nascimento, endereço (composto);
-   * Produto: ID (PK), nome, preço, categoria;
-   * Serviço: ID (PK), continuidade, nome, preço, cliente;
-   * Funcionário CPF (PK), nome, telefone (Multivalorado), ocupação, status;
-   * Falecido: CPF (PK), certidão de óbito, nome, data de nascimento, cliente;
-   * Jazigo: ID (PK), número, tipo, status, vagas;
+      * Cliente: CPF (PK), nome, e-mail (Multivalorado), telefone (Multivalorado), senha, data de nascimento, endereço (composto);
+      * Produto: ID (PK), nome, preço, categoria;
+      * Serviço: ID (PK), continuidade, nome, preço, cliente;
+      * Funcionário CPF (PK), nome, telefone (Multivalorado), ocupação, status;
+      * Falecido: CPF (PK), certidão de óbito, nome, data de nascimento, cliente;
+      * Jazigo: ID (PK), número, tipo, status, vagas;
 
 4. Diagrama Entidade e Relacionamento (DER)
 
