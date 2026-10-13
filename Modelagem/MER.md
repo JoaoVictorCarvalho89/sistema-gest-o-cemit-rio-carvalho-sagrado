@@ -24,12 +24,12 @@
    
 3. Sugestão de Atributos
 
-   Cliente: CPF (PK), nome, e-mail (Multivalorado), telefone (Multivalorado), senha, data de nascimento, endereço (composto);
-   Produto: ID (PK), nome, preço, categoria;
-   Serviço: ID (PK), continuidade, nome, preço, cliente;
-   Funcionário CPF (PK), nome, telefone (Multivalorado), ocupação, status;
-   Falecido: CPF (PK), certidão de óbito, nome, data de nascimento, cliente;
-   Jazigo: ID (PK), número, tipo, status, vagas;
+   * Cliente: CPF (PK), nome, e-mail (Multivalorado), telefone (Multivalorado), senha, data de nascimento, endereço (composto);
+   * Produto: ID (PK), nome, preço, categoria;
+   * Serviço: ID (PK), continuidade, nome, preço, cliente;
+   * Funcionário CPF (PK), nome, telefone (Multivalorado), ocupação, status;
+   * Falecido: CPF (PK), certidão de óbito, nome, data de nascimento, cliente;
+   * Jazigo: ID (PK), número, tipo, status, vagas;
 
 4. Diagrama Entidade e Relacionamento (DER)
 
