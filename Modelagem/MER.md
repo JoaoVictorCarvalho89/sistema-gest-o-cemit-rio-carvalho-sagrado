@@ -5,7 +5,7 @@
    O CLIENTE pode comprar PRODUTOS do cemitério, tais como decorações, ou contratar SERVIÇOS funerários para a cerimônia do FALECIDO, este que pode, ou não, estar alocado em um jazigo.
    Enquanto aos FUNCIONÁRIOS, eles possuem status de ocupação e atuação para serem gerenciados conforme a necessidade dos SERVIÇOS contratados pelos CLIENTES.
 
-3. Relacionamentos e Cardinalidades
+2. Relacionamentos e Cardinalidades
 
    [Cliente] (0,N) <Comprar> (1,1) [Produto]
    Descrição: Cada cliente pode comprar vários produtos, mas um produto só pode atender a um cliente.
@@ -22,7 +22,7 @@
    [Falecido] (0,N) <Alocar> (1,1) [Jazigo]
    Descrição: Cada falecido pode estar alocado em um jazigo, enquanto um jazigo pode acomodar vários falecidos.
    
-5. Sugestão de Atributos
+3. Sugestão de Atributos
 
    Cliente: CPF (PK), nome, e-mail (Multivalorado), telefone (Multivalorado), senha, data de nascimento, endereço (composto);
    Produto: ID (PK), nome, preço, categoria;
@@ -31,7 +31,7 @@
    Falecido: CPF (PK), certidão de óbito, nome, data de nascimento, cliente;
    Jazigo: ID (PK), número, tipo, status, vagas;
 
-7. Diagrama Entidade e Relacionamento (DER)
+4. Diagrama Entidade e Relacionamento (DER)
 
 <img width="796" height="745" alt="image" src="https://github.com/user-attachments/assets/eb757881-b8bf-4e5e-9e89-77b5dfecf2de" />
 
