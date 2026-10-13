@@ -13,7 +13,7 @@
 
 ## 2. Relacionamentos e Cardinalidades
 
-     * [Cliente] (1,1) — (0,N) [Produto] Descrição: Cada cliente pode realizar a compra de 0 ou vários ($N$) produtos, enquanto cada registro de compra de produto pertence obrigatoriamente a 1 único cliente.
+     * [Cliente] (1,1) — (0,N) [Produto] Descrição: Cada cliente pode realizar a compra de 0 ou vários ### N produtos, enquanto cada registro de compra de produto pertence obrigatoriamente a 1 único cliente.
      * [Cliente] (1,1) — (0,N) [Serviço] (via associativa Contratar )Descrição: Cada cliente pode contratar 0 ou vários ($N$) serviços, e um serviço do catálogo pode estar contratado por 0 ou vários ($N$) clientes. Cada contrato individual está vinculado obrigatoriamente a 1 único cliente.
      * [Cliente] (1,N) — (1,N) [Falecido] (via associativa Preparar) Descrição: Um cliente pode ser o responsável pela preparação de 1 ou vários ($N$) falecidos (para sepultamento, cremação ou cerimonial), e um mesmo falecido pode estar associado a 1 ou mais ($N$) clientes responsáveis (como familiares/membros da família).
      * [Serviço] (0,N) — (1,N) [Funcionário] (via associativa Execução) Descrição: Cada serviço do catálogo pode ter 0 ou várias ($N$) execuções registradas. Uma execução de serviço exige a atuação de pelo menos 1 ou mais ($N$) funcionários, enquanto cada funcionário pode participar de 1 ou várias ($N$) execuções de serviços.
