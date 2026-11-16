@@ -340,12 +340,12 @@ VALUES
 -- CONSULTA 1: Listar todos os clientes cadastrados
 SELECT * FROM Cliente; -- Seleciona todas as colunas de Cliente 
 SELECT nome FROM Cliente; -- Seleciona a coluna nome
-SELECT IdCliente AS 'Codigo do Cliente', nome AS 'Nome' FROM Cliente; -- Seleciona ambos idCliente e nome, e fornece um "apelido"
+SELECT IdCliente AS 'Código do Cliente', nome AS 'Nome' FROM Cliente; -- Seleciona ambos idCliente e nome, e fornece um "apelido"
 
 -- CONSULTA 2: Listar todos os serviços cadastrados
 SELECT * FROM Servico;
 SELECT nome FROM Servico; -- Seleciona a coluna nome
-SELECT IdServico AS 'Codigo do Servico', nome AS 'Servico' FROM Servico; -- Seleciona ambos idServico e nome, e fornece um "apelido"
+SELECT IdServico AS 'Código do Servico', nome AS 'Servico' FROM Servico; -- Seleciona ambos idServico e nome, e fornece um "apelido"
 
 -- -------------------------------------------------------------------------
 -- CONSULTA 3: Cruzamento de Dados (INNER JOIN)
@@ -366,4 +366,3 @@ INNER JOIN Servico s   ON co.idServico = s.idServico;
 -- EXPLICAÇÃO DO INNER JOIN:
 -- 1. 
 -- 2. 
-
