@@ -363,6 +363,16 @@ FROM Cliente c
 INNER JOIN Contrata co ON c.idCliente = co.idCliente
 INNER JOIN Servico s   ON co.idServico = s.idServico;
 
+SELECT 
+    f.idFalecido AS 'Código do Falecido',
+    f.nome AS 'Nome do Falecido',
+    j.idJazigo AS 'Código do Jazigo',
+    j.nome AS 'Serviço Contratado',
+    s.preco AS 'Valor (R$)'
+FROM Cliente c
+INNER JOIN Contrata co ON c.idCliente = co.idCliente
+INNER JOIN Servico s   ON co.idServico = s.idServico;
+
 -- EXPLICAÇÃO DO INNER JOIN:
 -- 1. 
 -- 2. 
