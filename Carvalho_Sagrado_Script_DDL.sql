@@ -16,7 +16,7 @@ USE CemiterioCarvalhoSagradoDB; -- Seleciona o banco de dados CemiterioCarvalhoS
 CREATE TABLE IF NOT EXISTS UnidadeRegional (
     idUnidadeRegional INT UNSIGNED NOT NULL PRIMARY KEY,
     nome VARCHAR(125) NOT NULL,
-    endereco VARCHAR(255) NOT NULL
+    endereco VARCHAR(255) NOT NULL,
     telefone VARCHAR(20) NOT NULL
 );
 
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS Servico (
 CREATE TABLE IF NOT EXISTS Produto (
     idProduto INT UNSIGNED NOT NULL PRIMARY KEY,
     nome VARCHAR(125) NOT NULL,
-    preco DECIMAL(10, 2) NOT NULL CHECK (preco >= 0)
+    preco DECIMAL(10, 2) NOT NULL CHECK (preco >= 0),
     categoria VARCHAR(20) NOT NULL
 );
 
@@ -83,8 +83,8 @@ CREATE TABLE IF NOT EXISTS Jazigo (
     idJazigo INT UNSIGNED NOT NULL PRIMARY KEY,
     numero INT NOT NULL,
     tipo VARCHAR(50) NOT NULL,
-    status_jazigo VARCHAR(20) NOT NULL NOT NULL DEFAULT 'Indisponível',
-    vagas INT NOT NULL,
+    status_jazigo VARCHAR(20) NOT NULL DEFAULT 'Indisponível',
+    vagas INT NOT NULL check (vagas >= 0),
     idUnidadeRegional INT UNSIGNED NOT NULL,
     
     CONSTRAINT fk_jazigo_unidade
@@ -143,7 +143,7 @@ CREATE TABLE IF NOT EXISTS Contrata (
     idCliente INT UNSIGNED NOT NULL,
     idServico INT UNSIGNED NOT NULL,
     data_contratacao DATE NOT NULL,
-    desconto DECIMAL(10, 2) NOT NULL DEFAULT 0.00 CHECK (desconto >= 0)
+    desconto DECIMAL(10, 2) NOT NULL DEFAULT 0.00 CHECK (desconto >= 0),
 
     PRIMARY KEY (idCliente, idServico, data_contratacao),
     
@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS Compra (
     idProduto INT UNSIGNED NOT NULL,
     data_compra DATE NOT NULL,
     quantidade INT UNSIGNED NOT NULL DEFAULT 1 CHECK (quantidade > 0),
- 
+
     PRIMARY KEY (idCliente, idProduto, data_compra),
     
     CONSTRAINT fk_compra_cliente
