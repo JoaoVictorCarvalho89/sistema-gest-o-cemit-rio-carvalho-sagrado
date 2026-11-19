@@ -122,3 +122,24 @@ VALUES
     (1, 3, '2026-04-03', '01:30:00'), -- Carlos (Sepultador) realizou Sepultamento Standard
     (5, 5, '2026-05-16', '03:00:00'), -- Ricardo (Jardineiro) realizou Jardinagem Anual
     (1, 3, '2026-06-21', '01:45:00'); -- Carlos (Sepultador) realizou segundo Sepultamento Standard
+
+-- =========================================================================
+-- Cenário 6 — Inovação Digital e Memorial Interativo com Inteligência Artificial:
+-- Buscando diferenciar-se da concorrência, a equipe de marketing do Cemitério 
+-- Carvalho Sagrado lançou um serviço web exclusivo de duração contínua em 
+-- parceria com a Big Tech fictícia "EternumAI". O serviço, disponível no plano 
+-- funerário mais completo por R$ 100,00 mensais, eterniza a personalidade do 
+-- ente querido em um chatbot de IA para que a família possa "revisitá-lo".
+-- =========================================================================
+
+INSERT INTO Servico (idServico, nome, descricao, preco)
+VALUES
+    (6, 'Memorial Interativo EternumAI (Assinatura Mensal)', 'Serviço web exclusivo em parceria com a Big Tech EternumAI: recriação conversacional do ente querido via chatbot de IA (plano contínuo).', 100.00);
+
+INSERT INTO Contrata (idCliente, idServico, data_contratacao, desconto)
+VALUES
+    (1, 6, '2026-07-15', 0.00); -- Ana Silva (cliente do plano premium) contratou o chatbot memorial por R$ 100,00/mês
+
+INSERT INTO Execucao (idFuncionario, idServico, data_execucao, duracao)
+VALUES
+    (2, 6, '2026-07-16', '01:00:00'); -- Beatriz (Atendente Comercial) realizou a ativação e integração web do perfil na plataforma EternumAI
