@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS Cliente (
     cpfCliente VARCHAR(11) NOT NULL UNIQUE,
     nome VARCHAR(125) NOT NULL,
     dataNascimento DATE NOT NULL,
+    dataInscricao DATE NOT NULL DEFAULT (CURRENT_DATE) CHECK (dataInscricao >= dataNascimento),
     email VARCHAR(125) NOT NULL UNIQUE,
     endereco VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL,
